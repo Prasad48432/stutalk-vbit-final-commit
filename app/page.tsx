@@ -7,7 +7,6 @@ import {
   Checkbox,
   Footer,
   Label,
-  Sidebar as FlowbiteSidebar,
   TextInput,
   Timeline,
   Tooltip,
@@ -21,16 +20,8 @@ import {
   BsYoutube,
 } from "react-icons/bs";
 import {
-  HiArrowSmRight,
-  HiChartPie,
-  HiInbox,
-  HiShoppingBag,
-  HiTable,
-  HiUser,
-  HiViewBoards,
 } from "react-icons/hi";
 import Header from "./components/header";
-import Sidebar from "./components/sidebar";
 import { SidebarProvider } from "./context/SidebarContext";
 import Blogs from "./components/blogs";
 import Contact from "./components/contact";
