@@ -1,66 +1,33 @@
 "use client";
 
 import {
-  Accordion,
-  Alert,
-  Avatar,
-  Badge,
-  Breadcrumb,
   Button,
   Card,
   Carousel,
   Checkbox,
-  Dropdown,
   Footer,
   Label,
-  ListGroup,
-  Modal,
-  Navbar,
-  Pagination,
-  Progress,
-  Rating,
   Sidebar as FlowbiteSidebar,
-  Spinner,
-  Table,
-  Tabs,
   TextInput,
   Timeline,
-  Toast,
   Tooltip,
 } from "flowbite-react";
-import Image from "next/image";
-import React, { useState } from "react";
-import { BiBuoy } from "react-icons/bi";
+import React from "react";
 import {
   BsDribbble,
-  BsEmail,
   BsFacebook,
-  BsGithub,
   BsInstagram,
   BsLinkedin,
-  BsTwitter,
   BsYoutube,
 } from "react-icons/bs";
 import {
-  HiAdjustments,
-  HiArrowNarrowRight,
   HiArrowSmRight,
   HiChartPie,
-  HiCheck,
-  HiClipboardList,
-  HiCloudDownload,
-  HiDatabase,
-  HiExclamation,
-  HiEye,
-  HiHome,
   HiInbox,
-  HiOutlineAdjustments,
   HiShoppingBag,
   HiTable,
   HiUser,
-  HiUserCircle,
   HiViewBoards,
-  HiX,
 } from "react-icons/hi";
 import Header from "./components/header";
 import Sidebar from "./components/sidebar";
@@ -100,12 +67,6 @@ export default function Index(): JSX.Element {
   );
 }
 
-function ActualSidebar(): JSX.Element {
-  return (
-    <Sidebar>
-    </Sidebar>
-  );
-}
 
 function HomePage(): JSX.Element {
   return (
@@ -349,57 +310,6 @@ function FooterExample(): JSX.Element {
         </div>
       </div>
     </Footer>
-  );
-}
-
-
-function SidebarExample(): JSX.Element {
-  const [isOpen, setOpen] = useState(false);
-
-  function toggle() {
-    setOpen(!isOpen);
-  }
-
-  return (
-    <>
-      <Button color="warning" onClick={toggle}>
-        Toggle sidebar
-      </Button>
-      <div className="my-6 h-96">
-        <FlowbiteSidebar aria-label="Example sidebar" collapsed={isOpen}>
-          <FlowbiteSidebar.Items>
-            <FlowbiteSidebar.ItemGroup>
-              <FlowbiteSidebar.Item href="#" icon={HiChartPie}>
-                Dashboard
-              </FlowbiteSidebar.Item>
-              <FlowbiteSidebar.Item
-                href="#"
-                icon={HiViewBoards}
-                label="Pro"
-                labelColor="gray"
-              >
-                Kanban
-              </FlowbiteSidebar.Item>
-              <FlowbiteSidebar.Item href="#" icon={HiInbox} label="3">
-                Inbox
-              </FlowbiteSidebar.Item>
-              <FlowbiteSidebar.Item href="#" icon={HiUser}>
-                Users
-              </FlowbiteSidebar.Item>
-              <FlowbiteSidebar.Item href="#" icon={HiShoppingBag}>
-                Products
-              </FlowbiteSidebar.Item>
-              <FlowbiteSidebar.Item href="#" icon={HiArrowSmRight}>
-                Sign In
-              </FlowbiteSidebar.Item>
-              <FlowbiteSidebar.Item href="#" icon={HiTable}>
-                Sign Up
-              </FlowbiteSidebar.Item>
-            </FlowbiteSidebar.ItemGroup>
-          </FlowbiteSidebar.Items>
-        </FlowbiteSidebar>
-      </div>
-    </>
   );
 }
 

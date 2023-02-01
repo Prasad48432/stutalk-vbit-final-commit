@@ -1,36 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
-    Accordion,
-    Alert,
-    Avatar,
-    Badge,
-    Breadcrumb,
     Button,
-    Card,
-    Carousel,
     Checkbox,
-    Dropdown,
-    Footer,
     Label,
-    ListGroup,
-    Modal,
-    Navbar,
-    Pagination,
-    Progress,
-    Rating,
-    Sidebar as FlowbiteSidebar,
-    Spinner,
-    Table,
-    Tabs,
     TextInput,
-    Timeline,
-    Toast,
-    Tooltip,
   } from "flowbite-react";
-
-  import Header from "./header";
-  import Sidebar from "./sidebar";
-  import { SidebarProvider } from "../context/SidebarContext";
 
 const contact = () => {
   return (
