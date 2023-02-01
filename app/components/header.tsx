@@ -1,16 +1,13 @@
-import { Navbar } from "flowbite-react";
+import { DarkThemeToggle, Navbar } from "flowbite-react";
 import Image from "next/image";
 import { FC } from "react";
-import { useSidebarContext } from "../context/SidebarContext";
 import {Link} from "react-router-dom";
 
 const Header: FC<Record<string, never>> = function () {
-  const { } =
-    useSidebarContext();
 
   return (
     <header className="sticky top-0 z-20 shadow-lg">
-      <Navbar fluid>
+      <Navbar >
         
         <Navbar.Brand href="/">
           <Image
@@ -25,6 +22,7 @@ const Header: FC<Record<string, never>> = function () {
         </Navbar.Brand>
         <div className="flex md:order-2">
           <Navbar.Toggle />
+          <DarkThemeToggle />
         </div>
         <Navbar.Collapse className="ml-50">
           <Link to="/" >Home</Link>
