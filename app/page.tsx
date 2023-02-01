@@ -22,7 +22,6 @@ import {
 import {
 } from "react-icons/hi";
 import Header from "./components/header";
-import { SidebarProvider } from "./context/SidebarContext";
 import Blogs from "./components/blogs";
 import Contact from "./components/contact";
 
@@ -32,8 +31,11 @@ import { BrowserRouter,Route,Routes } from "react-router-dom"
 export default function Index() : JSX.Element{
   if (typeof window !== 'undefined') {
   return (
+    <html>
+      <head>
+      <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+      </head>
     <BrowserRouter>
-    <SidebarProvider>
       <Header />
       <div className="flex dark:bg-gray-900">
         <main className="order-2 mx-4 mt-4 mb-24 flex-[1_0_16rem]">
@@ -55,8 +57,8 @@ export default function Index() : JSX.Element{
         </header>
         <FooterExample />
       </section>
-    </SidebarProvider>
     </BrowserRouter>
+    </html>
   );
   }
   else{

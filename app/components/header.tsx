@@ -32,6 +32,7 @@ const Header: FC<Record<string, never>> = function () {
         </Navbar.Collapse>
       </Navbar>
     </header>
+
   );
 };
 
