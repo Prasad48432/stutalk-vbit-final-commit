@@ -32,15 +32,10 @@ import { BrowserRouter,Route,Routes } from "react-router-dom"
 export default function Index() : JSX.Element{
   if (typeof window !== 'undefined') {
   return (
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="description" content="" />
-	<meta name="author" content="" />
-	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
-	<title>STU TALK</title>
-</head>
+   <html>
+      <head>
+      <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+      </head>
     <BrowserRouter>
     <SidebarProvider>
       <Header />
@@ -66,6 +61,7 @@ export default function Index() : JSX.Element{
       </section>
     </SidebarProvider>
     </BrowserRouter>
+</html>
   );
   }
   else{
