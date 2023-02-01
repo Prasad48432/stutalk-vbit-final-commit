@@ -29,10 +29,8 @@ import Contact from "./components/contact";
 import { BrowserRouter,Route,Routes } from "react-router-dom"
 
 
-export default function Index(){
+export default function Index() : JSX.Element{
   if (typeof window !== 'undefined') {
-    const [color, setColor] = useState('blue');
-    useEffect(() => setColor('red'), []);
   return (
     <BrowserRouter>
     <SidebarProvider>
@@ -60,6 +58,12 @@ export default function Index(){
     </SidebarProvider>
     </BrowserRouter>
   );
+  }
+  else{
+    return (
+      <>
+      </>
+    );
   }
 }
 
