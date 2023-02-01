@@ -31,10 +31,6 @@ import { BrowserRouter,Route,Routes } from "react-router-dom"
 export default function Index() : JSX.Element{
   if (typeof window !== 'undefined') {
   return (
-    <html>
-      <head>
-      <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
-      </head>
     <BrowserRouter>
       <Header />
       <div className="flex dark:bg-gray-900">
@@ -58,7 +54,6 @@ export default function Index() : JSX.Element{
         <FooterExample />
       </section>
     </BrowserRouter>
-    </html>
   );
   }
   else{
@@ -131,6 +126,7 @@ function HomePage(): JSX.Element {
         <FormsExample />
       </section>
     </div>
+</html>
   );
 }
 
