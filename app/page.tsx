@@ -11,7 +11,7 @@ import {
   Timeline,
   Tooltip,
 } from "flowbite-react";
-import React ,{ useEffect, useState }from "react";
+import React from "react";
 import {
   BsDribbble,
   BsFacebook,
