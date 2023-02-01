@@ -11,7 +11,7 @@ import {
   Timeline,
   Tooltip,
 } from "flowbite-react";
-import React from "react";
+import React ,{ useEffect, useState }from "react";
 import {
   BsDribbble,
   BsFacebook,
@@ -29,13 +29,17 @@ import Contact from "./components/contact";
 import { BrowserRouter,Route,Routes } from "react-router-dom"
 
 
-export default function Index(): JSX.Element {
+export default function Index(){
+  if (typeof window !== 'undefined') {
+    const [color, setColor] = useState('blue');
+    useEffect(() => setColor('red'), []);
   return (
     <BrowserRouter>
     <SidebarProvider>
       <Header />
       <div className="flex dark:bg-gray-900">
         <main className="order-2 mx-4 mt-4 mb-24 flex-[1_0_16rem]">
+        
           <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/blogs" element={<Blogs />} />
@@ -56,6 +60,7 @@ export default function Index(): JSX.Element {
     </SidebarProvider>
     </BrowserRouter>
   );
+  }
 }
 
 
